@@ -1,0 +1,41 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+}
+
+.page-tittle::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 130px;
+  height: 1.5px;
+  background: #ddd;
+  bottom: 1px;
+  left: calc(50% - 60px);
+}
+
+/* The next 2 selectors are for underlined for h3 or title page */
+.page-tittle {
+  font-family: Comfortaa !important;
+  color: #111;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+  position: relative;
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+
+.page-tittle::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: #ff8a25;
+  bottom: 0;
+  left: calc(50% - 20px);
+}
