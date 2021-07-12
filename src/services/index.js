@@ -2,7 +2,7 @@ import Axios from 'axios'
 import Vue from 'vue'
 
 const api = Axios.create({
-  baseURL: 'https://jsonplaceholder.typicode.com/posts'
+  baseURL: 'https://jsonplaceholder.typicode.com/posts/'
 })
 
 Vue.use({
