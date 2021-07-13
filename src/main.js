@@ -5,10 +5,11 @@ import router from './router'
 import store from './store'
 import { BootstrapVue } from 'bootstrap-vue'
 
+
 /* Import Bootstrap, Bootstrapvue and Sass style */
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
-import './assets/sass/style.sass'
+import './assets/css/style.css'
 
 // Import Axios arquive
 import './services'

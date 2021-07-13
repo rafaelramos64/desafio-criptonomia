@@ -1,0 +1,89 @@
+
+.page-tittle::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 130px;
+  height: 1.5px;
+  background: #ddd;
+  bottom: 1px;
+  left: calc(50% - 60px);
+}
+
+/* The next 2 selectors are for underlined for h3 or title page */
+.page-tittle {
+  font-family: Comfortaa !important;
+  color: #111;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+  position: relative;
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+
+.page-tittle::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: #aa82eb;
+  bottom: 0;
+  left: calc(50% - 20px);
+}
+
+/* Css for card-post */
+.card-post {
+  background-color: #fff;
+  min-height: 60vh;
+  max-height: 60vh;
+  overflow: auto;
+  position: relative;
+  color: #000;
+  font-family: "Montserrat", serif;
+  margin: 0 auto 24px;
+  border-radius: 1rem 1rem 0 0;
+  /* border-left: solid 5px #aa82eb; */
+  cursor: pointer;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.card-post:hover {
+  transition: all 0.3s linear;
+  transform: translateY(-3px);
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15) !important;
+  border-top: none!important;
+  border-right: none!important;
+  border-bottom: none!important
+}
+
+.rounded-top {
+  border-top-left-radius: 1rem !important;
+  border-top-right-radius: 1rem !important;
+}
+
+.card-post::-webkit-scrollbar {
+  width: 4px;
+}
+
+.card-post::-webkit-scrollbar-track {
+  background: #cecece;
+  border-radius: 3px;
+}
+
+.card-post::-webkit-scrollbar-thumb {
+  background: #aa82eb;
+  border-radius: 3px;
+}
+
+.card-post::-webkit-scrollbar-thumb:hover {
+  background: #aa82eb;
+}
+
+a {
+  text-decoration: none !important; 
+} 
