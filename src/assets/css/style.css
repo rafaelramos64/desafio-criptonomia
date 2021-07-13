@@ -36,8 +36,8 @@
 /* Css for card-post */
 .card-post {
   background-color: #fff;
-  min-height: 60vh;
-  max-height: 60vh;
+  min-height: 55vh;
+  max-height: 55vh;
   overflow: auto;
   position: relative;
   color: #000;
@@ -58,7 +58,29 @@
   box-shadow: 0 .5rem 1rem rgba(0,0,0,.15) !important;
   border-top: none!important;
   border-right: none!important;
-  border-bottom: none!important
+  border-bottom: none!important;
+}
+
+.card-post::-webkit-scrollbar {
+  width: 0px;
+}
+
+.card-post:hover::-webkit-scrollbar {
+  width: 4px;
+}
+
+.card-post:hover::-webkit-scrollbar-track {
+  background: #cecece;
+  border-radius: 3px;
+}
+
+.card-post:hover::-webkit-scrollbar-thumb {
+  background: #aa82eb;
+  border-radius: 3px;
+}
+
+.card-post:hover::-webkit-scrollbar-thumb:hover {
+  background: #b690f3;
 }
 
 .rounded-top {
@@ -66,23 +88,7 @@
   border-top-right-radius: 1rem !important;
 }
 
-.card-post::-webkit-scrollbar {
-  width: 4px;
-}
 
-.card-post::-webkit-scrollbar-track {
-  background: #cecece;
-  border-radius: 3px;
-}
-
-.card-post::-webkit-scrollbar-thumb {
-  background: #aa82eb;
-  border-radius: 3px;
-}
-
-.card-post::-webkit-scrollbar-thumb:hover {
-  background: #aa82eb;
-}
 
 a {
   text-decoration: none !important; 

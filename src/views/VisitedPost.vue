@@ -2,7 +2,7 @@
   <b-container>
     <b-row class="text-center">
       <b-col>
-        <h3 class="page-tittle my-5">Comments</h3>
+        <h3 class="page-tittle my-3">Comments</h3>
       </b-col>
     </b-row>
     <div class="card-comment">
@@ -36,7 +36,7 @@ import { mapState } from 'vuex'
 import Comments from '@/components/Comments'
 
 export default {
-  name: 'Post',
+  name: 'VisitedPost',
   components: { Comments },
   data () {
     return {
