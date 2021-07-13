@@ -6,6 +6,9 @@ Link para o site da Criptonomia: https://www.criptonomia.com
 ```
 https://teste-criptonomia.web.app
 ```
+```
+https://teste-criptonomia.firebaseapp.com/
+```
 
 ## Project setup
 ```
