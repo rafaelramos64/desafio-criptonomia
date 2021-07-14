@@ -1,6 +1,14 @@
 # Desafio Criptonomia
-Desafio realizado para concorrer à uma vaga de Dev Front-end na empresa Criptonomia. https://www.criptonomia.com
+Desafio realizado para concorrer à uma vaga de Dev Front-end na empresa Criptonomia.
+Link para o site da Criptonomia: https://www.criptonomia.com
 
+## Link para a aplicação online
+```
+https://teste-criptonomia.web.app
+```
+```
+https://teste-criptonomia.firebaseapp.com/
+```
 
 ## Project setup
 ```
