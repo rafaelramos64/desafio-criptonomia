@@ -44,7 +44,7 @@ export default {
   mounted () {
     this.disableButtons()
   },
-  
+
   computed: {
     ...mapState(['allPosts']),
 
@@ -158,6 +158,10 @@ export default {
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
 }
 
+.page:hover{
+  background-color: #ddd;
+}
+
 div .active {
   background-color: #aa82eb !important;
   color: #fff !important;
@@ -184,9 +188,9 @@ div .active {
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
 }
 
-.pagination :hover:not(.active) {
+/* .pagination :hover:not(.active) {
   background-color: #ddd;
-}
+} */
 
 .cursor {
   cursor: pointer !important;

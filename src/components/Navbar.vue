@@ -9,24 +9,8 @@
       <div>
         <ul class="navbar-nav" style="margin-left: auto">
           <li class="nav-item active">
-            <router-link v-if="this.$route.name !== 'Home' " class="nav-link" :to="{ name: 'MedicinesRegistration' }">
-              <!-- b-button
-                class="mr-0"
-                variant="outline-success"
-              >
-                <span><i class="fas fa-plus"></i></span> Medicamentos
-              </b-button> -->
-            </router-link>
           </li>
           <li class="nav-item active">
-            <router-link v-if="this.$route.name !== 'Home' " class="nav-link" :to="{ name: 'ListMedicines' }">
-              <!-- <b-button
-                variant="outline-success"
-                @click="listMedicines"
-              >
-                Lista de Medicamentos
-              </b-button> -->
-            </router-link>
           </li>
         </ul>
       </div>
