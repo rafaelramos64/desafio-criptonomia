@@ -1,7 +1,8 @@
 <template>
   <b-container>
-    <b-row>
-      <b-col md="4" v-for="post in listItems" :key="post.id">
+    <Loader v-if="loading" />
+    <b-row v-else>
+      <b-col md="4" sm="6" lg="4" v-for="post in listItems" :key="post.id">
         <div
           class="card-post shadow-sm"
           @click.prevent.stop="sendPost(post.title, post.body, post.id)"
@@ -25,12 +26,15 @@
 
 <script>
 import { mapState, mapMutations, mapActions } from 'vuex'
+import Loader from '@/components/Loader'
 
 export default {
   name: 'Posts',
+  components: { Loader },
   data () {
     return {
-      allPostsResponse: []
+      allPostsResponse: [],
+      loading: true
     }
   },
 
@@ -43,14 +47,17 @@ export default {
   },
 
   methods: {
-    ...mapMutations(['CHANGE_POST_TO_VIEW', 'ADD_ALL_POSTS']),
+    ...mapMutations(['CHANGE_POST_TO_VIEW', 'ADD_ALL_POSTS', 'CHANGE_LOAD_STATUS']),
     ...mapActions(['LIST_ITEMS']),
 
     async getAllPosts () {
+      this.CHANGE_LOAD_STATUS(true)
       const { data } = await this.$axios.get()
       this.ADD_ALL_POSTS(data)
       this.allPostsResponse = data
       this.LIST_ITEMS({ posts: this.allPostsResponse, page: 1 })
+      this.CHANGE_LOAD_STATUS(false)
+      this.loading = false
     },
 
     sendPost (title, body, postId) {

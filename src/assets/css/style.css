@@ -12,7 +12,7 @@
 
 /* The next 2 selectors are for underlined for h3 or title page */
 .page-tittle {
-  font-family: Comfortaa !important;
+  font-family: "Montserrat", serif, monospace;
   color: #111;
   text-transform: uppercase;
   text-align: center;
@@ -34,6 +34,13 @@
 }
 
 /* Css for card-post */
+@media only screen and (max-width: 500px) {
+  .card-post {
+    min-height: 50vh;
+    max-height: 50vh;
+  }
+}
+
 .card-post {
   background-color: #fff;
   min-height: 55vh;

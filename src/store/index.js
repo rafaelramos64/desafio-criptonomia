@@ -8,7 +8,8 @@ export default new Vuex.Store({
     postTitle: '',
     postBody: '',
     allPosts: [],
-    listItems: []
+    listItems: [],
+    loading: true
   },
   mutations: {
     CHANGE_POST_TO_VIEW (state, payload) {
@@ -22,6 +23,10 @@ export default new Vuex.Store({
 
     CHANGE_LIST_ITEMS (state, payload) {
       state.listItems = payload
+    },
+
+    CHANGE_LOAD_STATUS (state, payload) {
+      state.loading = payload
     }
   },
 

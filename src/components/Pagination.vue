@@ -1,5 +1,5 @@
 <template>
-  <div class="pagination">
+  <div v-if="!loading" class="pagination">
     <div
       v-show="!disablePrevButton"
       @click="prevPage()"
@@ -33,7 +33,6 @@ export default {
   name: 'Paginagion',
   data () {
     return {
-      loading: true,
       currentPage: 1,
       itemsPerPage: 6,
       disablePrevButton: false,
@@ -46,7 +45,7 @@ export default {
   },
 
   computed: {
-    ...mapState(['allPosts']),
+    ...mapState(['allPosts', 'loading']),
 
     allowList () {
       const { totalPages } = this

@@ -1,33 +1,37 @@
 <template>
-  <b-container>
+  <b-container fluid>
     <b-row class="text-center">
       <b-col>
         <h3 class="page-tittle my-3">Comments</h3>
       </b-col>
     </b-row>
-    <div class="card-comment">
-      <b-row>
-        <b-col>
-          <div>
-            <h2 class="text-center py-3 mb-3">{{ this.postTitle }}</h2>
-            <b-img
-              :src="require('../assets/image/bg-01.jpg')"
-              height="400" center alt="img-post"
-              rounded="top" style="object-fit: contain;"/>
-          </div><br>
 
-          <div class=" mx-5">
-            <p style="font-size: 22px">{{ this.postBody }}</p>
-          </div>
-          <h2 class="p-3 text-center mb">Comentários para este post</h2>
+    <b-row class="card-comment">
+      <b-col class="p-0">
+        <b-row>
+          <b-col>
+            <div>
+              <h2 class="text-center p-3 mb-3">{{ this.postTitle }}</h2>
+              <b-img
+                class="img-post"
+                :src="require('../assets/image/bg-01.jpg')"
+                height="400" center alt="img-post"
+                rounded="top" style="object-fit: contain;"/>
+            </div><br>
 
-        </b-col>
-      </b-row>
+            <div class=" mx-5">
+              <p style="font-size: 22px">{{ this.postBody }}</p>
+            </div>
+            <h2 class="p-3 text-center mb">Comentários para este post</h2>
 
-      <b-row>
-        <Comments />
-      </b-row>
-    </div>
+          </b-col>
+        </b-row>
+
+        <b-row>
+          <Comments />
+        </b-row>
+      </b-col>
+    </b-row>
   </b-container>
 </template>
 
@@ -63,5 +67,17 @@ export default {
   box-shadow: 0 .5rem 1rem rgba(0,0,0,.15) !important;
 }
 
+@media only screen and (max-width: 600px) {
+  .card-comment {
+    width: 98% !important;
+    margin: auto;
+  }
 
+  .img-post {
+    min-width: 100% !important;
+    max-width: 100% !important;
+    height: 35vh !important;
+    border-radius: 0 !important;
+  }
+}
 </style>

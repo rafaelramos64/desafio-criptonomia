@@ -1,34 +1,36 @@
 <template>
-  <b-container>
-    <b-row no-gutters>
-      <b-col md="12" class="p-0 div-comment" v-for="comment in comments" :key="comment.id">
-        <b-row align-h="between">
-          <b-col cols="10">
-            <b-img 
-              v-b-tooltip.hover.left.v-light :title="comment.name"
-              class="img-user"
-              :src="require('../assets/image/ramos.jpg' )"
-              rounded="circle" height="50px" width="50px">
-            </b-img>
-            <span class="name-user"><!-- {{ comment.name }} --> <i>{{ comment.email }}</i></span>
-            <span style="font-size: 14px; color: #000">15 de julho de 2021 17:30</span>
-          </b-col>
+  <transition name="slide-fade">
+    <b-container>
+      <b-row no-gutters>
+        <b-col md="12" class="p-0 div-comment" v-for="comment in comments" :key="comment.id">
+          <b-row align-h="between">
+            <b-col cols="10">
+              <b-img 
+                v-b-tooltip.hover.left.v-light :title="comment.name"
+                class="img-user"
+                :src="require('../assets/image/ramos.jpg' )"
+                rounded="circle" height="50px" width="50px">
+              </b-img>
+              <span class="name-user"><!-- {{ comment.name }} --> <i>{{ comment.email }}</i></span>
+              <span style="font-size: 14px; color: #000">15 de julho de 2021 17:30</span>
+            </b-col>
 
-          <b-col cols="2" align-self="center" style="display: flex; justify-content: flex-end; padding-right: 2rem">
-            <span class="comment-numbe text-right">{{ comment.id }}</span><br>
-          </b-col>  
-        </b-row>
+            <b-col cols="2" align-self="center" style="display: flex; justify-content: flex-end; padding-right: 2rem">
+              <span class="comment-numbe text-right">{{ comment.id }}</span><br>
+            </b-col>  
+          </b-row>
 
-        <b-row>
-          <b-col>
-            <div class="mx-1 mb-1 px-1 shadow-sm div" style="background-color: #fff; border-radius: .5rem .5rem 0 0">
-              <span>{{ comment.body }}</span>
-            </div>
-          </b-col>
-        </b-row>
-      </b-col>
-    </b-row>
-  </b-container>
+          <b-row>
+            <b-col>
+              <div class="mx-1 mb-1 px-1 shadow-sm div" style="background-color: #fff; border-radius: .5rem .5rem 0 0">
+                <span>{{ comment.body }}</span>
+              </div>
+            </b-col>
+          </b-row>
+        </b-col>
+      </b-row>
+    </b-container>
+  </transition>
 </template>
 
 <script>
@@ -64,6 +66,12 @@ export default {
   border-radius: 0.5rem 0.5rem 0 0;
 }
 
+@media only screen and (max-width: 600px) {
+  .div-comment {
+    width: 80% !important;
+  }
+}
+
 
 .img-user {
   position: relative;
@@ -79,5 +87,17 @@ export default {
 
 span {
   font-size: 20px;
+}
+
+.slide-fade-enter-active {
+  transition: all .3s ease;
+}
+.slide-fade-leave-active {
+  transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-fade-enter, .slide-fade-leave-to
+/* .slide-fade-leave-active em versões anteriores a 2.1.8 */ {
+  transform: translateX(10px);
+  opacity: 0;
 }
 </style>
