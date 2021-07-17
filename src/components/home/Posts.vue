@@ -9,7 +9,7 @@
           >
           <div>
             <b-img
-              :src="require('../assets/image/bg-01.jpg')"
+              :src="require('../../assets/image/bg-01.jpg')"
               fluid alt="img-post"
               rounded="top" style="object-fit: contain;"/>
           </div><br>

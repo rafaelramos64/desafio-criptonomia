@@ -9,7 +9,8 @@ export default new Vuex.Store({
     postBody: '',
     allPosts: [],
     listItems: [],
-    loading: true
+    loading: true,
+    commentsLength: 0
   },
   mutations: {
     CHANGE_POST_TO_VIEW (state, payload) {
@@ -27,6 +28,10 @@ export default new Vuex.Store({
 
     CHANGE_LOAD_STATUS (state, payload) {
       state.loading = payload
+    },
+
+    GET_COMMENTS_LENGTH (state, payload) {
+      state.commentsLength = payload
     }
   },
 

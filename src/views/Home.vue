@@ -21,8 +21,8 @@
 
 <script>
 
-import Pagination from '@/components/Pagination'
-import Posts from '@/components/Posts'
+import Pagination from '@/components/home/Pagination'
+import Posts from '@/components/home/Posts'
 
 export default {
   name: 'Home',

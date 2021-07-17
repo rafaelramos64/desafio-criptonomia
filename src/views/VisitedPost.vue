@@ -11,19 +11,30 @@
         <b-row>
           <b-col>
             <div>
-              <h2 class="text-center p-3 mb-3">{{ this.postTitle }}</h2>
+              <h1 class="text-center p-3 mb-3">{{ this.postTitle }}</h1>
               <b-img
                 class="img-post"
                 :src="require('../assets/image/bg-01.jpg')"
                 height="400" center alt="img-post"
-                rounded="top" style="object-fit: contain;"/>
+                rounded="top"/>
             </div><br>
 
-            <div class=" mx-5">
+            <div class="mx-5 px-5">
               <p style="font-size: 22px">{{ this.postBody }}</p>
             </div>
-            <h2 class="p-3 text-center mb">Comentários para este post</h2>
 
+            <b-row class="text-center mx-5 px-5 remove-spacing">
+              <b-col cols="6" class="d-inline-flex justify-content-center remove-spacing">
+                <div class="rounded-circle background-likes">
+                  <b-icon class="icon-heart" icon="heart-fill" variant="light" scale="1.3"></b-icon>
+                </div>
+                <span class="mx-2">{{ commentsLength }}</span>
+              </b-col>
+              <b-col cols="6" class="remove-spacing">
+                <span style="color: rgba(0, 0, 0, 0.7) !important;">{{ commentsLength }} Comentários</span>
+              </b-col>
+            </b-row>
+            <hr style="margin-left: 7rem; margin-right: 7rem">
           </b-col>
         </b-row>
 
@@ -37,20 +48,19 @@
 
 <script>
 import { mapState } from 'vuex'
-import Comments from '@/components/Comments'
+import Comments from '@/components/visitedPost/Comments'
 
 export default {
   name: 'VisitedPost',
   components: { Comments },
   data () {
     return {
-      comments: []
     }
   },
 
   computed: {
-    ...mapState(['postTitle', 'postBody'])
-  }
+    ...mapState(['postTitle', 'postBody', 'commentsLength'])
+  },
 
 }
 </script>
@@ -67,7 +77,7 @@ export default {
   box-shadow: 0 .5rem 1rem rgba(0,0,0,.15) !important;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 750px) {
   .card-comment {
     width: 98% !important;
     margin: auto;
@@ -76,8 +86,44 @@ export default {
   .img-post {
     min-width: 100% !important;
     max-width: 100% !important;
-    height: 35vh !important;
+    height: 40vh !important;
     border-radius: 0 !important;
+    object-fit: contain;
   }
+
+  hr {
+    margin-left: 3rem !important;
+    margin-right: 3rem !important;
+  }
+}
+
+@media only screen and (max-width: 510px) {
+  hr {
+    margin-left: 2rem !important;
+    margin-right: 2rem !important;
+  }
+
+  .remove-spacing {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+}
+
+.background-likes {
+  background-color: #dc3545;
+  min-height: 34px;
+  max-height: 34px;
+  min-width: 34px;
+  max-width: 34px;
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15) !important;
+}
+
+.icon-heart {
+  color: #fff; position: relative;
+  top: 8px;
+}
+
+.icon-heart:hover {
+  cursor: default !important;
 }
 </style>

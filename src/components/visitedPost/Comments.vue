@@ -8,7 +8,7 @@
               <b-img 
                 v-b-tooltip.hover.left.v-light :title="comment.name"
                 class="img-user"
-                :src="require('../assets/image/ramos.jpg' )"
+                :src="require('../../assets/image/ramos.jpg' )"
                 rounded="circle" height="50px" width="50px">
               </b-img>
               <span class="name-user"><!-- {{ comment.name }} --> <i>{{ comment.email }}</i></span>
@@ -34,6 +34,8 @@
 </template>
 
 <script>
+import { mapMutations } from 'vuex'
+
 export default {
   name: 'Comments',
   data () {
@@ -47,10 +49,13 @@ export default {
   },
 
    methods: {
+    ...mapMutations(['GET_COMMENTS_LENGTH']),
+
     async getPost () {
       const id = this.$route.params.id
       const { data } = await this.$axios.get(`${id}/comments`)
       this.comments = data
+      this.GET_COMMENTS_LENGTH(this.comments.length)
     }
   }
 }
@@ -70,6 +75,15 @@ export default {
   .div-comment {
     width: 80% !important;
   }
+  .img-user {
+    left: -3.3rem !important;
+  }
+}
+
+@media only screen and (max-width: 510px) {
+  .img-user {
+    left: -3.1rem !important;
+  }
 }
 
 
@@ -77,6 +91,7 @@ export default {
   position: relative;
   left: -4rem;
   object-fit: cover;
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15) !important;
 }
 
 .name-user {
