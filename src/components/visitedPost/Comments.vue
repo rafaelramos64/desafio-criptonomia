@@ -12,10 +12,11 @@
                 rounded="circle" height="50px" width="50px">
               </b-img>
               <span class="name-user"><!-- {{ comment.name }} --> <i>{{ comment.email }}</i></span>
-              <span class="comment-date" style="font-size: 14px; color: #000">15 de julho de 2021 17:30</span>
+              <span class="comment-date" style="font-size: 14px; color: rgba(0, 0, 0, 0.7);">15 de julho de 2021 17:30</span>
             </b-col>
 
-            <b-col class="comment-number p-0" cols="2" align-self="center">
+            <b-col
+              class="comment-number" cols="2" align-self="center">
               <span>{{ comment.id }}</span><br>
             </b-col>  
           </b-row>
@@ -79,7 +80,7 @@ export default {
 .comment-number {
   display: flex;
   justify-content: flex-end;
-  padding-right: 2rem
+  padding: 0 2rem 0 0;
 }
 
 @media only screen and (max-width: 600px) {
@@ -89,13 +90,13 @@ export default {
 
   .img-user {
     top: .5rem;
-    left: 0.1rem !important;
+    left: -0.3rem !important;
     height: 60px !important;
     width: 60px !important;
   }
 
   .name-user {
-    left: 0.7rem !important;
+    left: 0.3rem !important;
   }
 
   .comment-date {
@@ -110,6 +111,15 @@ export default {
     padding-right: 1rem !important;
     position: relative;
     top: -1rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .comment-number {
+    padding-right: 0.8rem !important;
+    position: relative;
+    top: -1rem;
+    justify-content: flex-begin;
   }
 }
 

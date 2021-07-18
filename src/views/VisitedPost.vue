@@ -22,16 +22,19 @@
             <div class="post-body mx-5 px-5">
               <p style="font-size: 22px; font-family: 'Ubuntu', sans-serif;">{{ this.postBody }}</p>
             </div>
-
+            
+            <hr style="margin-left: 7rem; margin-right: 7rem">
             <b-row class="text-center mx-5 px-5 remove-spacing">
               <b-col cols="6" class="d-inline-flex justify-content-center remove-spacing">
                 <div class="rounded-circle background-likes">
                   <b-icon class="icon-heart" icon="heart-fill" variant="light" scale="1.3"></b-icon>
                 </div>
-                <span class="mx-2">{{ commentsLength }}</span>
+                <span style="color: rgba(0, 0, 0, 0.7);" class="mx-2">{{ commentsLength }} Likes</span>
               </b-col>
+
               <b-col cols="6" class="remove-spacing">
-                <span style="color: rgba(0, 0, 0, 0.7) !important; ">{{ commentsLength }} Comentários</span>
+                <b-icon class="icon-comments mx-3" icon="chat-right-dots" scale="2"></b-icon>
+                <span style="color: rgba(0, 0, 0, 0.7);">{{ commentsLength }} Comentários</span>
               </b-col>
             </b-row>
             <hr style="margin-left: 7rem; margin-right: 7rem">
@@ -79,8 +82,8 @@ export default {
 
 @media only screen and (max-width: 750px) {
   .card-comment {
-    width: 98% !important;
-    margin: auto;
+    width: 99% !important;
+    margin: 0 auto;
   }
 
   .img-post {
@@ -120,7 +123,7 @@ export default {
 }
 
 .background-likes {
-  background-color: #dc3545;
+  background-color: #aa82eb;
   min-height: 34px;
   max-height: 34px;
   min-width: 34px;
@@ -129,11 +132,18 @@ export default {
 }
 
 .icon-heart {
-  color: #fff; position: relative;
+  color: #fff;
+  position: relative;
   top: 8px;
 }
 
 .icon-heart:hover {
   cursor: default !important;
+}
+
+.icon-comments {
+  font-weight: bolder !important;
+  color: #aa82eb !important;
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15) !important;
 }
 </style>
