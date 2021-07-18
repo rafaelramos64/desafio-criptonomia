@@ -6,12 +6,15 @@
           <b-row align-h="between" no-gutters>
             <b-col cols="10" class="p-0">
               <b-img 
-                v-b-tooltip.hover.left.v-light :title="comment.name"
+                v-b-tooltip.hover.left.v-light
+                :title="comment.email"
                 class="img-user"
                 :src="require('../../assets/image/ramos.jpg' )"
                 rounded="circle" height="50px" width="50px">
               </b-img>
-              <span class="name-user"><!-- {{ comment.name }} --> <i>{{ comment.email }}</i></span>
+              <span class="name-user" style="text-transform: capitalize"><!--<i>{{ comment.email }}</i> --> 
+                {{ comment.name.split(' ')[0] }} {{ comment.name.split(' ')[comment.name.split(' ').length - 1] }}
+              </span>
               <span class="comment-date" style="font-size: 14px; color: rgba(0, 0, 0, 0.7);">15 de julho de 2021 17:30</span>
             </b-col>
 
@@ -140,8 +143,9 @@ export default {
 
 .name-user {
   position: relative;
-  left: -2.5rem;
+  left: -1.5rem;
   font-weight: bolder;
+  /* text-transform: lowercase; */
 }
 
 span {
