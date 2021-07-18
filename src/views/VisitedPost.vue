@@ -11,7 +11,7 @@
         <b-row>
           <b-col>
             <div>
-              <h1 class="text-center p-3 mb-3">{{ this.postTitle }}</h1>
+              <h1 class="text-center p-3 mb-1">{{ this.postTitle }}</h1>
               <b-img
                 class="img-post"
                 :src="require('../assets/image/bg-01.jpg')"
@@ -20,7 +20,7 @@
             </div><br>
 
             <div class="post-body mx-5 px-5">
-              <p style="font-size: 22px; font-family: 'Ubuntu', sans-serif;">{{ this.postBody }}</p>
+              <p>{{ this.postBody }}</p>
             </div>
             
             <hr style="margin-left: 7rem; margin-right: 7rem">
@@ -78,6 +78,10 @@ export default {
   border-radius: 1rem 1rem 0 0;
   /* border-left: solid 5px #aa82eb; */
   box-shadow: 0 .5rem 1rem rgba(0,0,0,.15) !important;
+}
+
+.post-body {
+  font-size: 22px; font-family: 'Ubuntu', sans-serif;
 }
 
 @media only screen and (max-width: 750px) {

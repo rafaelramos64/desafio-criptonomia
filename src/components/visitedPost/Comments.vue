@@ -7,12 +7,12 @@
             <b-col cols="10" class="p-0">
               <b-img 
                 v-b-tooltip.hover.left.v-light
-                :title="comment.email"
+                :title="comment.email.toLowerCase()"
                 class="img-user"
                 :src="require('../../assets/image/ramos.jpg' )"
                 rounded="circle" height="50px" width="50px">
               </b-img>
-              <span class="name-user" style="text-transform: capitalize"><!--<i>{{ comment.email }}</i> --> 
+              <span class="name-user"><!--<i>{{ comment.email }}</i> --> 
                 {{ comment.name.split(' ')[0] }} {{ comment.name.split(' ')[comment.name.split(' ').length - 1] }}
               </span>
               <span class="comment-date" style="font-size: 14px; color: rgba(0, 0, 0, 0.7);">15 de julho de 2021 17:30</span>
@@ -93,12 +93,12 @@ export default {
 
   .img-user {
     top: .3rem;
-    left: -0.3rem !important;
+    left: 0.8rem !important;
   }
 
   .name-user {
-    left: 0.3rem !important;
-    font-size: 1.2rem;
+    left: 0.9rem !important;
+    font-size: 1.1rem;
   }
 
   .col-10 {
@@ -114,7 +114,7 @@ export default {
     flex-direction: column;
     display: block !important;
     position: relative;
-    left: 3.5rem;
+    left: 4.5rem;
     bottom: 1rem;
   }
 
@@ -145,7 +145,9 @@ export default {
   position: relative;
   left: -1.5rem;
   font-weight: bolder;
-  /* text-transform: lowercase; */
+  text-transform: capitalize;
+  font-family: 'Ubuntu', sans-serif !important;
+  font-style: italic;
 }
 
 span {
