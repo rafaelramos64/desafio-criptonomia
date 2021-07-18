@@ -4,7 +4,7 @@
       <b-row no-gutters>
         <b-col md="12" class="p-0 div-comment shadow-sm" v-for="comment in comments" :key="comment.id">
           <b-row align-h="between" no-gutters>
-            <b-col cols="10">
+            <b-col cols="10" class="p-0">
               <b-img 
                 v-b-tooltip.hover.left.v-light :title="comment.name"
                 class="img-user"
@@ -15,8 +15,8 @@
               <span class="comment-date" style="font-size: 14px; color: #000">15 de julho de 2021 17:30</span>
             </b-col>
 
-            <b-col cols="2" align-self="center" style="display: flex; justify-content: flex-end; padding-right: 2rem">
-              <span class="comment-numbe text-right">{{ comment.id }}</span><br>
+            <b-col class="comment-number p-0" cols="2" align-self="center">
+              <span>{{ comment.id }}</span><br>
             </b-col>  
           </b-row>
 
@@ -76,20 +76,26 @@ export default {
   border-radius: 0.5rem 0.5rem 0 0;
 }
 
+.comment-number {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 2rem
+}
+
 @media only screen and (max-width: 600px) {
   .div-comment {
-    width: 80% !important;
+    width: 90% !important;
   }
 
   .img-user {
     top: .5rem;
-    left: 0.3rem !important;
+    left: 0.1rem !important;
     height: 60px !important;
     width: 60px !important;
   }
 
   .name-user {
-    left: 1rem !important;
+    left: 0.7rem !important;
   }
 
   .comment-date {
@@ -98,6 +104,12 @@ export default {
     display: block !important;
     position: relative;
     left: 4.5rem;
+  }
+
+  .comment-number {
+    padding-right: 1rem !important;
+    position: relative;
+    top: -1rem;
   }
 }
 
