@@ -19,7 +19,7 @@
                 rounded="top"/>
             </div><br>
 
-            <div class="mx-5 px-5">
+            <div class="post-body mx-5 px-5">
               <p style="font-size: 22px; font-family: 'Ubuntu', sans-serif;">{{ this.postBody }}</p>
             </div>
 
@@ -95,6 +95,11 @@ export default {
     margin-left: 3rem !important;
     margin-right: 3rem !important;
   }
+
+  .post-body {
+    margin: 0 !important;
+    padding: 0 3rem !important;
+  }
 }
 
 @media only screen and (max-width: 510px) {
@@ -106,6 +111,11 @@ export default {
   .remove-spacing {
     margin: 0 !important;
     padding: 0 !important;
+  }
+
+  .post-body {
+    padding: 0 !important;
+    margin: 0 1.5rem !important;
   }
 }
 

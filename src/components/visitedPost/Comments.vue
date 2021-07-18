@@ -3,7 +3,7 @@
     <b-container>
       <b-row no-gutters>
         <b-col md="12" class="p-0 div-comment shadow-sm" v-for="comment in comments" :key="comment.id">
-          <b-row align-h="between">
+          <b-row align-h="between" no-gutters>
             <b-col cols="10">
               <b-img 
                 v-b-tooltip.hover.left.v-light :title="comment.name"
@@ -12,7 +12,7 @@
                 rounded="circle" height="50px" width="50px">
               </b-img>
               <span class="name-user"><!-- {{ comment.name }} --> <i>{{ comment.email }}</i></span>
-              <span style="font-size: 14px; color: #000">15 de julho de 2021 17:30</span>
+              <span class="comment-date" style="font-size: 14px; color: #000">15 de julho de 2021 17:30</span>
             </b-col>
 
             <b-col cols="2" align-self="center" style="display: flex; justify-content: flex-end; padding-right: 2rem">
@@ -80,17 +80,26 @@ export default {
   .div-comment {
     width: 80% !important;
   }
+
   .img-user {
-    left: -3.3rem !important;
+    top: .5rem;
+    left: 0.3rem !important;
+    height: 60px !important;
+    width: 60px !important;
+  }
+
+  .name-user {
+    left: 1rem !important;
+  }
+
+  .comment-date {
+    display: flex;
+    flex-direction: column;
+    display: block !important;
+    position: relative;
+    left: 4.5rem;
   }
 }
-
-@media only screen and (max-width: 510px) {
-  .img-user {
-    left: -3.1rem !important;
-  }
-}
-
 
 .img-user {
   position: relative;
