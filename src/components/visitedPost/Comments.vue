@@ -98,7 +98,7 @@ export default {
 
   .name-user {
     left: 0.9rem !important;
-    font-size: 1.1rem;
+    font-size: 1.1rem !important;
   }
 
   .col-10 {
