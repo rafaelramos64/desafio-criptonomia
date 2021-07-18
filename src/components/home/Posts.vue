@@ -2,7 +2,7 @@
   <b-container>
     <Loader v-if="loading" />
     <b-row v-else>
-      <b-col class="px-3" md="4" sm="6" lg="4" v-for="post in listItems" :key="post.id">
+      <b-col class="px-4" md="4" sm="6" lg="4" v-for="post in listItems" :key="post.id">
         <b-row>
           <b-col
             class="card-post shadow-sm"
