@@ -89,14 +89,21 @@ export default {
   }
 
   .img-user {
-    top: .5rem;
+    top: .3rem;
     left: -0.3rem !important;
-    height: 60px !important;
-    width: 60px !important;
   }
 
   .name-user {
     left: 0.3rem !important;
+    font-size: 1.2rem;
+  }
+
+  .col-10 {
+    width: 85% !important;
+  }
+
+  .col-2 {
+    width: 15% !important;
   }
 
   .comment-date {
@@ -104,7 +111,8 @@ export default {
     flex-direction: column;
     display: block !important;
     position: relative;
-    left: 4.5rem;
+    left: 3.5rem;
+    bottom: 1rem;
   }
 
   .comment-number {

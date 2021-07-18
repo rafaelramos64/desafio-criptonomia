@@ -19,7 +19,7 @@
             </b-row>
 
             <b-row>
-              <b-col class="px-4" >
+              <b-col class="px-4 mt-2" >
                 <h4 style="text-align: center">{{ post.title }}</h4>
                 <p style="text-align: justify; font-family: 'Ubuntu', sans-serif;">{{ post.body }}</p>
               </b-col>
