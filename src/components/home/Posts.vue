@@ -25,7 +25,7 @@
               </b-col>
             </b-row>
             
-            <b-row no-gutters>
+            <b-row no-gutters class="mb-2">
               <b-col cols="4" class="d-inline-flex justify-content-center p-0">
                 <div class="rounded-circle background-likes ">
                   <b-icon class="icon-heart" icon="heart-fill" variant="light" scale="1.1"></b-icon>
@@ -33,12 +33,12 @@
                 <span class="mx-2">{{ 5 }}</span>
               </b-col>
 
-              <b-col cols="4" class="d-inline-flex justify-content-center p-0">
+              <b-col cols="3" class="d-inline-flex justify-content-center p-0">
                 <b-icon class="icon-comments" icon="chat-right-dots" scale="1.6"></b-icon>
                 <span class="mx-2">{{ 5 }}</span>
               </b-col>
 
-              <b-col cols="4" class="d-inline-flex justify-content-center p-0">
+              <b-col cols="5" class="d-inline-flex justify-content-center p-0">
                 <b-icon class="icon-calendar" icon="calendar-date-fill" scale="1.5"></b-icon>
                 <span class="mx-2">{{ date }}</span>
               </b-col>
