@@ -28,7 +28,7 @@
             <b-col>
               <div
                 class="mx-1 mb-1 px-1  comment-body">
-                <span>{{ comment.body }}</span>
+                <span>{{ comment.body }}.</span>
               </div>
             </b-col>
           </b-row>
@@ -146,8 +146,7 @@ export default {
   left: -1.5rem;
   font-weight: bolder;
   text-transform: capitalize;
-  font-family: 'Ubuntu', sans-serif !important;
-  font-style: italic;
+  color: #444 !important;
 }
 
 span {

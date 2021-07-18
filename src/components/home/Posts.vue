@@ -119,10 +119,6 @@ export default {
   color: #fff;
 }
 
-.icon-heart:hover {
-  cursor: default !important;
-}
-
 .icon-comments {
   position: relative;
   top: 0.3rem;
@@ -143,7 +139,7 @@ span {
   color: rgba(0, 0, 0, 0.7) !important;
   font-family: 'Ubuntu', sans-serif !important; 
   font-weight: 600 !important;
-  font-size: 1rem;
+  font-size: 1rem !important;
 }
 
 @media only screen and (max-width: 400px) {
