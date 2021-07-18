@@ -6,7 +6,7 @@
         <b-row>
           <b-col
             class="card-post shadow-sm"
-            @click.prevent.stop="sendPost(post.title, post.body, post.id)"
+            @click.prevent.stop="sendPost(post.title, post.body, post.id, post.userId)"
             >
             <b-row>
               <b-col class="p-0">
@@ -79,7 +79,7 @@ export default {
 
     async getAllPosts () {
       this.CHANGE_LOAD_STATUS(true)
-      const { data } = await this.$axios.get()
+      const { data } = await this.$axios.get('/posts')
       this.ADD_ALL_POSTS(data)
       this.allPostsResponse = data
       this.LIST_ITEMS({ posts: this.allPostsResponse, page: 1 })
@@ -87,8 +87,8 @@ export default {
       this.loading = false
     },
 
-    sendPost (title, body, postId) {
-      this.CHANGE_POST_TO_VIEW({ postTitle: title, postBody: body })
+    sendPost (title, body, postId, userId) {
+      this.CHANGE_POST_TO_VIEW({ postTitle: title, postBody: body, postUserId: userId })
       this.$router.push({ name: 'VisitedPost', params: { id: postId } })
     },
   }

@@ -10,8 +10,10 @@ import { BootstrapVue, BootstrapVueIcons } from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import './assets/css/style.css'
+
 // Import Axios arquive
 import './services'
+
 Vue.use(BootstrapVue)
 Vue.use(BootstrapVueIcons)
 

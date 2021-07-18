@@ -10,14 +10,61 @@
       <b-col class="p-0">
         <b-row>
           <b-col>
-            <div>
-              <h1 class="text-center p-3 mb-1">{{ this.postTitle }}</h1>
-              <b-img
-                class="img-post"
-                :src="require('../assets/image/bg-01.jpg')"
-                height="400" center alt="img-post"
-                rounded="top"/>
-            </div><br>
+            <b-row align-h="center" class="mt-3">
+              <b-col cols="10" class="user-post mx-auto" v-b-modal.modal>
+                <b-img
+                  class="img-user-poster shadow-sm"
+                  :src="require('../assets/image/ramos4.jpg' )"
+                  height="60px" width="60px">
+                </b-img>
+                <span class="name-user-poster" style="font-size: 20px; margin-left: 10px">
+                  {{ userPosterData.name }}
+                </span>
+                <span
+                  class="date-user-poster"
+                  style="font-size: 15px; color: rgba(0, 0, 0, 0.7); font-weight: normal">{{ date }} às 09:30
+                </span>                
+              </b-col>
+            </b-row>
+
+            <b-modal
+              ok-only
+              ok-variant="secondary"
+              hide-header-close
+              class="text-center"
+              id="modal"
+              ref="modal"
+              title="Contact"
+            >
+
+            <b-row style="font-family:  Montserrat  , serif, monospace; color: #111">
+              <b-col cols="12"> 
+                <span>Email: {{ userPosterData.email }}</span> 
+              </b-col>
+              <b-col cols="12">
+                <span>
+                  Website: {{ userPosterData.website }}
+                </span>
+              </b-col>
+              <b-col cols="12">
+                <span>
+                  Company Name: {{ userPosterData.company.name }}
+                </span>
+              </b-col>
+            </b-row>
+              
+            </b-modal>
+            
+            <b-row>
+              <b-col>
+                <h1 class="text-center p-3 mb-1">{{ this.postTitle }}</h1>
+                <b-img
+                  class="img-post"
+                  :src="require('../assets/image/bg-01.jpg')"
+                  height="400" center alt="img-post"
+                  rounded="top"/>
+              </b-col><br>
+            </b-row>
 
             <div class="post-body mx-5 px-5">
               <p>{{ this.postBody }}</p>
@@ -58,12 +105,26 @@ export default {
   components: { Comments },
   data () {
     return {
+      userPosterData: [],
+      date: '15/07/2021'
     }
   },
 
-  computed: {
-    ...mapState(['postTitle', 'postBody', 'commentsLength'])
+  created () {
+    this.getUserPoster()
   },
+
+  computed: {
+    ...mapState(['postTitle', 'postBody', 'postUserId', 'commentsLength'])
+  },
+
+  methods: {
+    async getUserPoster () {
+      const postUserId =  this.postUserId
+      const { data } = await this.$axios.get(`/users/${postUserId}`)
+      this.userPosterData = data
+    }
+  }
 
 }
 </script>
@@ -82,6 +143,51 @@ export default {
 
 .post-body {
   font-size: 22px; font-family: 'Ubuntu', sans-serif;
+}
+
+.img-user-poster {
+  border-radius: 0.3rem !important;
+  object-fit: cover;
+}
+
+.img-user-poster:hover {
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15) !important;
+}
+
+@media only screen and (max-width: 378px) {
+  .name-user-poster::after {
+    bottom: 0.2rem !important;
+    left: .0rem !important;
+  }
+
+  .date-user-poster {
+    position: relative;
+    bottom: 1rem !important;
+    left: 4.5rem !important;
+    display: flex;
+    flex-direction: column;
+    display: block !important;
+  }
+}
+
+@media only screen and (max-width: 441px) {
+  .col-10 {
+    width: 95% !important;
+  } 
+
+}
+
+.user-post:hover {
+  cursor: pointer;
+}
+
+.name-user-poster::after {
+  content: ".";
+  font-size: 3.5rem;
+  margin-right: 3px;
+  color: rgba(0, 0, 0, 0.5);
+  position: relative;
+  bottom: 3px;
 }
 
 @media only screen and (max-width: 750px) {

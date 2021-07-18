@@ -8,8 +8,8 @@
               <b-img 
                 v-b-tooltip.hover.left.v-light
                 :title="comment.email.toLowerCase()"
-                class="img-user"
-                :src="require('../../assets/image/ramos.jpg' )"
+                class="img-user-comments"
+                :src="require('../../assets/image/ramos3.jpg' )"
                 rounded="circle" height="50px" width="50px">
               </b-img>
               <span class="name-user"><!--<i>{{ comment.email }}</i> --> 
@@ -58,7 +58,7 @@ export default {
 
     async getPost () {
       const id = this.$route.params.id
-      const { data } = await this.$axios.get(`${id}/comments`)
+      const { data } = await this.$axios.get(`/posts/${id}/comments`)
       this.comments = data
       this.GET_COMMENTS_LENGTH(this.comments.length)
     }
@@ -91,7 +91,7 @@ export default {
     width: 90% !important;
   }
 
-  .img-user {
+  .img-user-comments {
     top: .3rem;
     left: 0.8rem !important;
   }
@@ -134,7 +134,7 @@ export default {
   }
 }
 
-.img-user {
+.img-user-comments {
   position: relative;
   left: -4rem;
   object-fit: cover;

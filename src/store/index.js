@@ -7,6 +7,7 @@ export default new Vuex.Store({
   state: {
     postTitle: '',
     postBody: '',
+    postUserId: undefined,
     allPosts: [],
     listItems: [],
     loading: true,
@@ -16,6 +17,7 @@ export default new Vuex.Store({
     CHANGE_POST_TO_VIEW (state, payload) {
       state.postTitle = payload.postTitle
       state.postBody = payload.postBody
+      state.postUserId = payload.postUserId
     },
 
     ADD_ALL_POSTS (state, payload) {
