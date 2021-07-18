@@ -9,6 +9,7 @@
           >
           <div>
             <b-img
+              class="img-posts"
               :src="require('../../assets/image/bg-01.jpg')"
               fluid alt="img-post"
               rounded="top" style="object-fit: contain;"/>
@@ -16,7 +17,7 @@
 
           <div class="px-4" >
             <h4 style="text-align: center">{{ post.title }}</h4>
-            <p style="text-align: justify">{{ post.body }}</p>
+            <p style="text-align: justify; font-family: 'Ubuntu', sans-serif;">{{ post.body }}</p>
           </div>
         </div>
       </b-col>
@@ -69,5 +70,8 @@ export default {
 </script>
 
 <style scoped lang="scss">
-  
+.card-post:hover .img-posts {
+  transition: all 0.3s linear;
+  opacity: 0.9;
+}
 </style>

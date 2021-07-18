@@ -20,7 +20,7 @@
             </div><br>
 
             <div class="mx-5 px-5">
-              <p style="font-size: 22px">{{ this.postBody }}</p>
+              <p style="font-size: 22px; font-family: 'Ubuntu', sans-serif;">{{ this.postBody }}</p>
             </div>
 
             <b-row class="text-center mx-5 px-5 remove-spacing">
@@ -31,7 +31,7 @@
                 <span class="mx-2">{{ commentsLength }}</span>
               </b-col>
               <b-col cols="6" class="remove-spacing">
-                <span style="color: rgba(0, 0, 0, 0.7) !important;">{{ commentsLength }} Comentários</span>
+                <span style="color: rgba(0, 0, 0, 0.7) !important; ">{{ commentsLength }} Comentários</span>
               </b-col>
             </b-row>
             <hr style="margin-left: 7rem; margin-right: 7rem">

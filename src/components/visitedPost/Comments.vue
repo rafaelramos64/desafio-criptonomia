@@ -2,7 +2,7 @@
   <transition name="slide-fade">
     <b-container>
       <b-row no-gutters>
-        <b-col md="12" class="p-0 div-comment" v-for="comment in comments" :key="comment.id">
+        <b-col md="12" class="p-0 div-comment shadow-sm" v-for="comment in comments" :key="comment.id">
           <b-row align-h="between">
             <b-col cols="10">
               <b-img 
@@ -22,7 +22,8 @@
 
           <b-row>
             <b-col>
-              <div class="mx-1 mb-1 px-1 shadow-sm div" style="background-color: #fff; border-radius: .5rem .5rem 0 0">
+              <div
+                class="mx-1 mb-1 px-1  comment-body">
                 <span>{{ comment.body }}</span>
               </div>
             </b-col>
@@ -66,8 +67,12 @@ export default {
   width: 70%;
   margin: auto;
   margin-bottom: 1rem;
-  background-color: #bc99f5;
-  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15) !important;
+  /* background-color: #bc99f5; */
+  background-color: #F9FAFF;
+  /* background: linear-gradient(
+    139.73deg
+    , rgb(229, 253, 255) 0%, rgb(243, 239, 255) 100%); */
+  /* box-shadow: 0 .5rem 1rem rgba(0,0,0,.15) !important; */
   border-radius: 0.5rem 0.5rem 0 0;
 }
 
@@ -102,6 +107,13 @@ export default {
 
 span {
   font-size: 20px;
+}
+
+.comment-body {
+  font-family: 'Ubuntu', sans-serif !important;
+  color: rgba(0, 0, 0, 0.7);
+  background-color: #fff;
+  border-radius: .5rem .5rem 0 0;
 }
 
 .slide-fade-enter-active {
