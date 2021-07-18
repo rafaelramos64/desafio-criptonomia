@@ -138,4 +138,17 @@ export default {
   color: #aa82eb !important;
   box-shadow: 0 .5rem 1rem rgba(0,0,0,.15) !important;
 }
+
+span {
+  color: rgba(0, 0, 0, 0.7) !important;
+  font-family: 'Ubuntu', sans-serif !important; 
+  font-weight: 600 !important;
+  font-size: 1rem;
+}
+
+@media only screen and (max-width: 400px) {
+  span {
+    font-size: 0.9rem;
+  }
+}
 </style>

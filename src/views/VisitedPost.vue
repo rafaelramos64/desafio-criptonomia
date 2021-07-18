@@ -34,7 +34,7 @@
 
               <b-col cols="6" class="remove-spacing">
                 <b-icon class="icon-comments mx-3" icon="chat-right-dots" scale="2"></b-icon>
-                <span style="color: rgba(0, 0, 0, 0.7);">{{ commentsLength }} Comentários</span>
+                <span style="color: rgba(0, 0, 0, 0.7);">{{ commentsLength }} Comments</span>
               </b-col>
             </b-row>
             <hr style="margin-left: 7rem; margin-right: 7rem">
