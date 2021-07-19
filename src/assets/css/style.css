@@ -12,8 +12,6 @@
 
 /* The next 2 selectors are for underlined for h3 or title page */
 .page-tittle {
-  font-family: "Montserrat", serif, monospace !important;
-  /* font-family: 'Ubuntu', sans-serif; */
   color: #111;
   text-transform: uppercase;
   text-align: center;

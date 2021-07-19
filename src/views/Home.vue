@@ -2,7 +2,7 @@
   <b-container>
     <b-row class="text-center">
       <b-col>
-        <h3 class="page-tittle my-3">Posts</h3>
+        <h3 style="font-family: 'Montserrat', serif, monospace !important;" class="page-tittle my-3">Posts</h3>
       </b-col>
     </b-row>
     <b-row>
