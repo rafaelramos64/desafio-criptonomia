@@ -146,7 +146,7 @@ export default {
     left: 4.5rem !important;
     display: flex;
     flex-direction: column;
-    display: block !important;
+    max-width: 50% !important;
   }
 }
 

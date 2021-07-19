@@ -116,6 +116,7 @@ export default {
     position: relative;
     left: 4.5rem;
     bottom: 1rem;
+    max-width: 90% !important;
   }
 
   .comment-number {
