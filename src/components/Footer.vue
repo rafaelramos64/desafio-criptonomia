@@ -3,7 +3,7 @@
     <b-row class="text-center justify-content-md-center" align-v="end" style="padding-top: 10px">
       <b-col class="cols-footer" md="6" lg="6" sm="6" align-self="center">
         <span class="span">
-          &copy; CopyRight, E-BLOG 2021
+          &copy; CopyRight, <b>E-BLOG</b> 2021
         </span>
       </b-col>
       <b-col class="cols-footer sidebar-footer" md="6" lg="6" sm="6" align-self="center" style="padding-top: 15px">
