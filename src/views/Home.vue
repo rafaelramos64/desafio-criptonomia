@@ -11,7 +11,7 @@
       </b-col>
     </b-row>
 
-    <b-row class="mb-3">
+    <b-row class="mb-5">
       <b-col>
         <Pagination />
       </b-col>

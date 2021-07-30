@@ -1,7 +1,9 @@
 <template>
   <div>
     <Navbar />
-    <router-view/>
+    <transition mode="out-in">
+      <router-view/>
+    </transition>
     <Footer />
   </div>
 </template>
@@ -14,5 +16,14 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="css" >
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.8s;
+}
+
+.v-enter,
+.v-leave-to {
+  opacity: 0;
+}
 </style>
