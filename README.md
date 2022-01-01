@@ -14,6 +14,10 @@ Link para o site da Criptonomia: https://www.criptonomia.com
 https://teste-criptonomia.netlify.app
 ```
 
+## Link para adescrição do desafio
+```
+https://docs.google.com/document/d/1DUkMIPdYCIPB2A04_TQtJwQZ63laGLad0WgcvS97wDA/edit?usp=sharing
+```
 ## Project setup
 ```
 npm install
